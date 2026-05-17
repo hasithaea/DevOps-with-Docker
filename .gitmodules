@@ -1,6 +1,0 @@
-[submodule "exercises/docker"]
-	path = exercises/docker
-	url = https://github.com/docker-hy/material-applications.git
-[submodule "projects"]
-	path = projects
-	url = https://github.com/docker-hy/material-applications.git
