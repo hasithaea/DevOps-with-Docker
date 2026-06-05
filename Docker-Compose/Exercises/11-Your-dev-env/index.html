@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invesment Cal</title>
+
+    <script>
+        function total()
+        {
+            let initialDep = Number(document.getElementById("initial").value);
+            let intRate = Number(document.getElementById("interest").value);
+            let period = Number(document.getElementById("period").value);
+
+            if(initialDep<=0||isNaN(initialDep))
+            {
+                document.getElementById("result").innerHTML="Error: Initial Deposit cannot be empty";
+                return;
+            }
+
+            if(intRate<1||intRate>20||isNaN(intRate))
+            {
+                document.getElementById("result").innerHTML="Error: int rate betwenn 1 &20";
+                return;
+            }
+
+            let intAmt=(initialDep*intRate/100)*period;
+
+            let totalAmt=(initialDep+intAmt);
+
+            document.getElementById("total").value=totalAmt.toFixed(2);
+            document.getElementById("result").innerHTML="";
+        }
+
+    </script>
+</head>
+<body>
+   <h1>Invesment calculator</h1> 
+
+   Initial Deposit
+   <input id="initial" type="number" min="0.01" required>
+   <br>
+
+    Annual interset rate (1-20%)
+    <input id="interest" type="number" min="1" max="20">%
+    <br>
+
+    Deposit Period (Years)
+    <select id="period">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    <br>
+
+    <button onclick="total()" type="button">calculate</button>
+    <br>
+
+    Total amount at the end of the period 
+    <input id="total" type="number" readonly>
+    <p id="result"></p>
+
+
+</body>
+</html>
