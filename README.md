@@ -20,3 +20,7 @@ the course — covering Docker commands, concepts, and configurations.
 ## Tools Used
 - Docker
 - Docker Compose
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
