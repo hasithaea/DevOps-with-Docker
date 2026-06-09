@@ -23,4 +23,4 @@ the course — covering Docker commands, concepts, and configurations.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](./LICENCE.md) file for details.
