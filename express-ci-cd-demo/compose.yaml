@@ -1,0 +1,19 @@
+services:
+  express-app:
+    container_name: express-app
+    image: hasithaea/express-ci-cd-demo:latest
+    ports:
+      - "8080:8080"
+    labels:
+      - "com.centurylinklabs.watchtower.scope=express-app"
+  
+  watchtower:
+    image: nickfedor/watchtower
+    environment:
+      - WATCHTOWER_POLL_INTERVAL=60
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    container_name: watchtower
+    command: --scope express-app
+
+    
