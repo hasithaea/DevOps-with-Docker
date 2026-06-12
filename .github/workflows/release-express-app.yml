@@ -30,3 +30,6 @@ jobs:
           context: ./express-ci-cd-demo
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/express-ci-cd-demo:latest
+        
+      - name: Deploy to Render
+        run: curl ${{ secrets.RENDER_DEPLOY_HOOK }}
