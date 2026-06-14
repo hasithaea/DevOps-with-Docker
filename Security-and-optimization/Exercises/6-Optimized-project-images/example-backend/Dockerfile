@@ -4,17 +4,17 @@ WORKDIR /myapp
 
 COPY . .
 
-RUN go build
 
-ENV PORT=8080
-ENV REQUEST_ORIGIN=http://localhost:5001
+RUN go build &&\
+    go test ./... &&\
+    useradd -m appuser &&\
+    chown appuser . &&\ 
+    rm -rf /root/go/pkg/mod/cache /tmp/* 
 
 
+ENV PORT=8080 \
+    REQUEST_ORIGIN=http://localhost:5001
 
-RUN go test ./...
-
-RUN useradd -m appuser
-RUN chown appuser .
 USER appuser
 
 EXPOSE 8080
