@@ -9,9 +9,22 @@ git clone https://github.com/$REPOSITORY.git repo
 
 cd repo
 
-docker build -t $IMAGE_NAME .
+echo "$DOCKER_PWD" | docker login \
+  --username "$DOCKER_USER" \
+  --password-stdin
 
-docker push $IMAGE_NAME
+docker build -t "$IMAGE_NAME" .
+
+docker push "$IMAGE_NAME"
 
 
 # ./builder.sh github_username/repo_name docker_username/image_name
+
+
+#docker run \
+#  -e DOCKER_USER=yourusername \
+#  -e DOCKER_PWD=your_token_here \
+#  -v /var/run/docker.sock:/var/run/docker.sock \
+#  builder \
+#  github_username/repo \
+#  docker_username/image
