@@ -1,20 +1,34 @@
 # DevOps with Docker
 
-My hands-on exercises and activities completed during the **DevOps with Docker** 
+My hands on exercises and activities completed during the **DevOps with Docker** 
 course conducted by the **University of Helsinki**.
 
 ## Course Info
 - **Course:** DevOps with Docker, Spring 2026
 - **Institution:** University of Helsinki
 - **Platform:** [mooc.fi](https://www.mooc.fi/en/)
-- **Status:** Ongoing
+- **Status:** Finished 
+
+## Certificates
+
+<table>
+  <tr>
+    <td><img src="./certificates/docker-basics.png" width="250"></td>
+    <td><img src="./certificates/docker-compose.png" width="250"></td>
+    <td><img src="./certificates/security-and-optimization.png" width="250"></td>
+  </tr>
+  <tr>
+    <td align="center">Docker Basics</td>
+    <td align="center">Docker Compose</td>
+    <td align="center">Security & Optimization</td>
+  </tr>
+</table>
 
 ## About
-This repository contains small exercises and activities practiced throughout 
-the course — covering Docker commands, concepts, and configurations.
+This repository contains exercises and activities practiced throughout 
+the course - covering Docker commands, concepts, and configurations.
 
 # express-ci-cd-demo
-
 
 A simple Node.js/Express app with a fully automated CI/CD pipeline.
 
