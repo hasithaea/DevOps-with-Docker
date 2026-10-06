@@ -40,7 +40,7 @@ app.get("/", (req, res) => {
           <h1>CI/CD Pipeline Demo</h1>
           <p>
             This is a minimal Express app used as the test subject for a
-            push-to-deploy pipeline. The app is intentionally simple — the
+            push to deploy pipeline. The app is intentionally simple. The
             pipeline is the project.
           </p>
           <p>
